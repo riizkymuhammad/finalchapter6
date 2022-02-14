@@ -1,6 +1,6 @@
 const { Student } = require("../models")
 
-class UsersGameController {
+class BiodataGameController {
   static renderHello(req, res) {
     res.send("hello")
   }
@@ -116,4 +116,4 @@ class UsersGameController {
   }
 }
 
-module.exports = UsersGameController;
+module.exports = BiodataGameController;

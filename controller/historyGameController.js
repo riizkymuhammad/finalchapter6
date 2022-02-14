@@ -1,6 +1,6 @@
 const { Student } = require("../models")
 
-class UsersGameController {
+class HistroyGameController {
   static renderHello(req, res) {
     res.send("hello")
   }
@@ -15,7 +15,7 @@ class UsersGameController {
     //   .catch((error) => {
     //     console.log(error)
     //   })
-      res.render("usersGame/index")
+      res.render("historyGame/index")
   }
 
   static viewById(req, res) {

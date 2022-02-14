@@ -1,17 +1,17 @@
-const StudentController = require('../controller//usersGameController');
+const UsersGameController = require('../controller/usersGameController');
 
-const studentsRouter = require('express').Router();
+const usersGameRouter = require('express').Router();
 
 // ambil semua data dari students di db
-studentsRouter.get("/hello", StudentController.renderHello)
-studentsRouter.get("/", StudentController.viewAll)
-studentsRouter.get("/add", StudentController.getAddForm)
-studentsRouter.post("/add", StudentController.addStudent)
-studentsRouter.get("/:id/delete", StudentController.deleteStudent)
-studentsRouter.get("/:id/edit", StudentController.getEditForm)
-studentsRouter.post("/:id/edit", StudentController.editStudent)
-studentsRouter.get("/:id", StudentController.viewById)
-studentsRouter.get("/cari/:email", StudentController.viewByEmail)
+usersGameRouter.get("/hello", UsersGameController.renderHello)
+usersGameRouter.get("/", UsersGameController.viewAll)
+usersGameRouter.get("/add", UsersGameController.getAddForm)
+usersGameRouter.post("/add", UsersGameController.addStudent)
+usersGameRouter.get("/:id/delete", UsersGameController.deleteStudent)
+usersGameRouter.get("/:id/edit", UsersGameController.getEditForm)
+usersGameRouter.post("/:id/edit", UsersGameController.editStudent)
+usersGameRouter.get("/:id", UsersGameController.viewById)
+usersGameRouter.get("/cari/:email", UsersGameController.viewByEmail)
 
 
-module.exports = studentsRouter;
+module.exports = usersGameRouter;

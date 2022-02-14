@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <%- include('../components/head') %>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <%- include('../components/sidebar') %>
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <%- include('../components/navbar') %>
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-4">
+                                <h2>Data User</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ml-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" placeholder="Masukkan Username">
+                    </div>
+                    <div class="mb-3 ml-3">
+                    <label class="form-label">Nama</label>
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap">
+                    </div>
+                    <div class="mb-3 ml-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Masukkan Email">
+                    </div>
+                    <div class="mb-3 ml-3">
+                        <label class="form-label">Password</label>
+                        <input type="text" class="form-control" placeholder="Masukkan Password">
+                    </div>
+
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            
+                        </div>
+                        <div class=".col-md-4 .offset-md-4 mr-3">
+                            <button class="btn btn-success"><i class="fas fa-save"></i> Simpan</button>
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <%- include('../components/script') %>
+</body>
+
+</html>
