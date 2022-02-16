@@ -1,0 +1,27 @@
+[
+  {
+    "id": "c420bd78-9477-4ee1-87ff-6b42f91387ae",
+    "username": "rizky",
+    "password": "12345678"
+  },
+  {
+    "id": "ae350b2a-a5cd-47f3-b0c8-638dd3dc7a78",
+    "username": "riizkymuhammad",
+    "password": "12345678"
+  },
+  {
+    "id": "13d0989c-0212-434a-9a3d-2e7ba81c8dcb",
+    "username": "admin",
+    "password": "12345678"
+  },
+  {
+    "id": "b7708ad2-5fd0-4eb9-be46-ec05d1c10acc",
+    "username": "admin",
+    "password": "admin"
+  },
+  {
+    "id": "6806b52e-4f1e-4636-b316-32b28a3b3106",
+    "username": "admin123",
+    "password": "admin123"
+  }
+]

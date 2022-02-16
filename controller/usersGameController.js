@@ -1,4 +1,4 @@
-const { Student } = require("../models")
+const { UserGame } = require("../models")
 
 class UsersGameController {
   static renderHello(req, res) {
@@ -6,16 +6,15 @@ class UsersGameController {
   }
 
   static viewAll(req, res) {
-    // Student.findAll({
-    //   order: [["id", 'ASC']]
-    // })
-    //   .then((data) => {
-    //     res.render("students", { data })
-    //   })
-    //   .catch((error) => {
-    //     console.log(error)
-    //   })
-      res.render("usersGame/index")
+    UserGame.findAll({
+      order: [["id", 'ASC']]
+    })
+      .then((data) => {
+        res.render("usersGame/index", { data })
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
   static viewById(req, res) {
@@ -49,19 +48,19 @@ class UsersGameController {
     res.render("usersGame/create")
   }
 
-  static addStudent(req, res) {
+
+  static addUsers(req, res) {
     // bikin penampung object buat input data ke db
-    let newStudent = {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+    let newUsers = {
+      username: req.body.username,
+      name: req.body.name,
       email: req.body.email,
-      gender: req.body.gender,
-      birthday: req.body.birthday
+      password: req.body.password,
     }
 
-    Student.create(newStudent)
+    UserGame.create(newUsers)
       .then((_) => {
-        res.redirect("/students")
+        res.redirect("/users")
       })
       .catch((err) => {
         console.log(err)
@@ -70,45 +69,44 @@ class UsersGameController {
 
   static getEditForm(req, res) {
     const id = req.params.id
-    Student.findByPk(id)
+    UserGame.findByPk(id)
       .then((data) => {
         console.log(data)
-        res.render('students/edit', { data })
+        res.render('usersGame/edit', { data })
       })
       .catch((err) => {
         console.log(err)
       })
   }
 
-  static editStudent(req, res) {
+  static editUser(req, res) {
     const id = req.params.id
-    let updatedStudent = {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+    let updatedUser = {
+      username: req.body.username,
+      name: req.body.name,
       email: req.body.email,
-      gender: req.body.gender,
-      birthday: req.body.birthday
+      password: req.body.password,
     }
-    Student.update(updatedStudent, {
+    UserGame.update(updatedUser, {
       where: {
         id: id
       }
     })
       .then(() => {
-        res.redirect("/students")
+        res.redirect("/users")
       })
       .catch((err) => {
         console.log(err)
       })
   }
 
-  static deleteStudent(req, res) {
+  static deleteUser(req, res) {
     const id = req.params.id
-    Student.destroy({
+    UserGame.destroy({
       where: { id: id }
     })
       .then(() => {
-        res.redirect("/students")
+        res.redirect("/users")
       })
       .catch((err) => {
         console.log(err)

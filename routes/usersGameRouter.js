@@ -6,10 +6,10 @@ const usersGameRouter = require('express').Router();
 usersGameRouter.get("/hello", UsersGameController.renderHello)
 usersGameRouter.get("/", UsersGameController.viewAll)
 usersGameRouter.get("/add", UsersGameController.getAddForm)
-usersGameRouter.post("/add", UsersGameController.addStudent)
-usersGameRouter.get("/:id/delete", UsersGameController.deleteStudent)
+usersGameRouter.post("/add", UsersGameController.addUsers)
+usersGameRouter.get("/:id/delete", UsersGameController.deleteUser)
 usersGameRouter.get("/:id/edit", UsersGameController.getEditForm)
-usersGameRouter.post("/:id/edit", UsersGameController.editStudent)
+usersGameRouter.post("/:id/edit", UsersGameController.editUser)
 usersGameRouter.get("/:id", UsersGameController.viewById)
 usersGameRouter.get("/cari/:email", UsersGameController.viewByEmail)
 

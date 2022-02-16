@@ -1,7 +1,7 @@
 const router = require('./routes')
 const express = require('express')
 const app = express()
-const port = 5432
+const port = 3000
 
 app.use(express.static('assets'))
 app.set('view engine', 'ejs')

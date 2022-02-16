@@ -25,22 +25,22 @@
                         </div>
                     </div>
 
-                    <form action="/users/add" method="POST">
+                    <form action="/users/<%= data.id %>/edit" method="POST">
    <div class="mb-3 ml-3">
                         <label class="form-label">Username</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Username" name="username">
+                        <input type="text" class="form-control"  placeholder="Masukkan Username" name="username" value=<%= data.username%>>
                     </div>
                     <div class="mb-3 ml-3">
                     <label class="form-label">Nama</label>
-                    <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" name="name">
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" name="name" value=<%= data.name%>>
                     </div>
                     <div class="mb-3 ml-3">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control" placeholder="Masukkan Email" name="email">
+                        <input type="email" class="form-control" placeholder="Masukkan Email" name="email" value=<%= data.email%>>
                     </div>
                     <div class="mb-3 ml-3">
                         <label class="form-label">Password</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Password" name="password">
+                        <input type="text" class="form-control" placeholder="Masukkan Password" name="password" value=<%= data.password%>>
                     </div>
 
                     <div class="row justify-content-between">
